@@ -1,0 +1,46 @@
+alias ss='./script/server'
+alias tu='top -o cpu' #cpu
+alias tm='top -o vsize' #mem
+#alias s="open -a Sublime Text"
+alias ..="cd .."
+alias d="cd ~/Desktop"
+alias dg="cd ~/Desktop/Git/hello" #this is temporary
+alias cdd="cd -"
+alias reload="source ~/bin/dotfiles/bash/aliases"
+alias reloadconfig="source ~/bin/dotfiles/bash/config"
+alias reloadenv="source ~/source ~/bin/dotfiles/bash/env"
+alias subl="open -a /Applications/Sublime.app $1"
+alias ea="subl ~/bin/dotfiles/bash/aliases"
+alias ee="subl ~/bin/dotfiles/bash/env"
+alias ec="subl ~/bin/dotfiles/bash/config"
+alias h="cd $HOME"
+
+alias oin="open -a /Applications/$1 $2"
+
+function take {
+	mkdir $1
+	cd $1
+}
+
+#git
+alias gs="git status"
+alias gc="git commit -m $1"
+alias gt="git tag"
+alias ga='git add $1'
+alias gb='git branch '
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias glt='git hist master --all'
+alias gitrevert='git reset --hard $1' #reverts to previous tag specified or previous hash
+alias gitdeletetag='git tag -d $1' #where $1 is the name of the tag, deletes all committs with this tag
+
+alias gitamend="git commit --amend -m $1"
+
+alias gl="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+alias glauth="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --author='$1'"
+alias glsince="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --since='$1 minutes ago'"
+
+alias got='git '
+alias get='git '

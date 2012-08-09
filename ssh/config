@@ -1,0 +1,4 @@
+Host myserver
+HostName myServer.example.com
+User myUser
+Port 2233
