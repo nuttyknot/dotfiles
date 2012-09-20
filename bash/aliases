@@ -1,7 +1,16 @@
 alias ss='./script/server'
 alias tu='top -o cpu' #cpu
 alias tm='top -o vsize' #mem
-#alias s="open -a Sublime Text"
+alias all="ls -lah"
+#mysql
+alias ms="mysql -u root"
+#ph
+alias phs="source ~/.virtualenvs/ph/bin/activate"
+alias ph="cd ~/.virtualenvs/ph"
+alias code="cd ~/code/"
+#other
+alias samp="source ~/.virtualenvs/samp/bin/activate"
+alias virt="cd ~/.virtualenvs/"
 alias ..="cd .."
 alias o="cd ~/Desktop/davidmjohnson.me/octopress"
 alias d="cd ~/Desktop"
@@ -17,12 +26,26 @@ alias ec="vim ~/bin/dotfiles/bash/config"
 alias h="cd $HOME"
 alias e="/usr/local/Cellar/emacs/24.1/bin/emacs-24.1"
 alias w="cd ~/Websites"
+<<<<<<< HEAD
+#django
+alias rundjang="python manage.py runserver"
+alias djang="django-admin.py startproject $1"
+#octo
+alias posts="cd ~/Desktop/davidmjohnson.me/octopress/source/_posts"
+alias rp="rake preview"
+alias rg="rake generate"
+#c
+alias regen="rm a.out && cc hi.c && a.out"
+#aws
+alias aws="ssh -i ~/Desktop/AWS/djweb.pem ec2-user@ec2-107-20-38-110.compute-1.amazonaws.com"
+=======
 #octo
 alias posts="cd ~/Desktop/davidmjohnson.me/octopress/source/_posts"
 alias rp="rake preview"
 #c
 alias regen="rm a.out && cc hi.c && a.out"
 
+>>>>>>> 9629ffd3f95978d55677d4b80213f3b871aafb9e
 #yesod
 function ye {
  cd $1 && cabal install && yesod devel
@@ -38,8 +61,13 @@ function take {
 }
 
 #git
+<<<<<<< HEAD
+alias gpod="git push origin dev" #push to origin dev branch
+=======
+>>>>>>> 9629ffd3f95978d55677d4b80213f3b871aafb9e
 alias ab="git branch -a" #show all git branches
 alias gs="git status"
+alias gca="git commit -a -m $1"
 alias gc="git commit -m $1"
 alias gt="git tag"
 alias ga='git add $1'
