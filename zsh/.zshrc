@@ -38,4 +38,8 @@ source $ZSH/oh-my-zsh.sh
 PWD=/Users/tiratat/Repositories/dotfiles/zsh
 source ${PWD}/../shared/aliases
 source ${PWD}/../shared/path
-
+# https://github.com/sjl/z-zsh
+. ${PWD}/z.sh
+function precmd () {
+    z --add "$(pwd -P)"
+}
