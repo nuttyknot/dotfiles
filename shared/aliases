@@ -1,0 +1,4 @@
+alias oin="open -a /Applications/$1 $2"
+alias lsa="ls -lah"
+alias gcca='gcc -ansi -pedantic -Wall -o $1'
+alias subl='open /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
