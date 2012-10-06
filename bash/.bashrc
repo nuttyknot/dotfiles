@@ -1,4 +1,4 @@
-PWD=/Users/tiratat/Repositories/dotfiles/bash
+PWD=/home/tiratatp/Repositories/dotfiles/bash
 
 source ${PWD}/env
 source ${PWD}/config
