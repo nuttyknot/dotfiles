@@ -29,13 +29,13 @@ ZSH_THEME="knot"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew mercurial npm osx pip sublime vi-mode)
+plugins=(git mercurial npm pip sublime vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-PWD=/Users/tiratat/Repositories/dotfiles/zsh
+PWD=/home/tiratatp/Repositories/dotfiles/zsh
 source ${PWD}/../shared/aliases
 source ${PWD}/../shared/path
 # https://github.com/sjl/z-zsh
