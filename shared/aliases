@@ -1,4 +1,6 @@
 alias oin="open -a /Applications/$1 $2"
 alias lsa="ls -lah"
 alias gcca='gcc -ansi -pedantic -Wall'
+alias vi="mvim -v"
 
+export VISUAL='mvim -f'

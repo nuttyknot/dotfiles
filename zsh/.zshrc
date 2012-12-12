@@ -1,3 +1,9 @@
+export BYOBU_PREFIX=$(brew --prefix)
+
+#If not running interactively, do not do anything
+#[[ $- != *i* ]] && return
+#[[ $TERM != screen* ]] && exec tmux
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -29,7 +35,7 @@ ZSH_THEME="knot"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial npm pip sublime vi-mode)
+plugins=(brew git mercurial svn npm osx pip sublime vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,8 +44,13 @@ source $ZSH/oh-my-zsh.sh
 PWD=/home/tiratatp/Repositories/dotfiles/zsh
 source ${PWD}/../shared/aliases
 source ${PWD}/../shared/path
-# https://github.com/sjl/z-zsh
-. ${PWD}/z.sh
-function precmd () {
-    z --add "$(pwd -P)"
+
+# https://github.com/rupa/z
+. ${PWD}/../z/z.sh
+
+activate() {
+    export VIRTUAL_ENV_DISABLE_PROMPT='1'
+    export HSENV_DISABLE_PROMPT='1'
+    source ./$1/bin/activate
 }
+

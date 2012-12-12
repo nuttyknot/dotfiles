@@ -1,2 +1,8 @@
 export PATH=/usr/local/share/python:/usr/local/sbin:${PATH}:/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools:/home/tiratatp/bin:/Users/tiratat/bin
 
+# Haskell
+export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+
+# play
+export PATH=$PATH:$HOME/Lib/play/current
