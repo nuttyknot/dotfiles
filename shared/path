@@ -1,5 +1,5 @@
 export PATH=/usr/local/share/python:/usr/local/sbin:${PATH}:/Applications/android-sdk-macosx/tools:/Applications/android-sdk-macosx/platform-tools
-
+export PATH=${PATH}:/home/tiratatp/Repositories/gward-vcprompt-8aa4445354b9
 # Haskell
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
