@@ -8,11 +8,9 @@ function hsenv_info {
 
 RPROMPT='%{$fg[green]%}$(virtualenv_info)$(hsenv_info)%{$reset_color%}%'
 
+export VCPROMPT_FORMAT="%n:(%b) $fg[red]%m%u$reset_color"
+
 PROMPT='
-%n@%m:%{$fg[yellow]%}%~ %{$fg_bold[cyan]%}$(git_prompt_info)%{$reset_color%}
+%n@%{$fg[blue]%}%m%{$reset_color%}:%{$fg[yellow]%}%~ %{$reset_color%}$(vcprompt)%{$reset_color%}
 → '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
