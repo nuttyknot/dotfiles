@@ -1,3 +1,4 @@
 alias lsa="ls -lah"
 alias gcca='gcc -ansi -pedantic -Wall'
 
+export VISUAL='vi'
