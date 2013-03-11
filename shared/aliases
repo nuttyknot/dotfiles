@@ -1,4 +1,26 @@
 alias lsa="ls -lah"
-alias gcca='gcc -ansi -pedantic -Wall'
-
 export VISUAL='vi'
+fic () {
+    if [ "$#" -eq 1 ]; then
+        srcstr="$1"
+    elif [ "$#" -eq 2 ]; then
+        srcstr="$1.*$2"
+    elif [ "$#" -eq 3 ]; then
+        srcstr="$1.*$2.*$3"
+    elif [ "$#" -eq 4 ]; then
+        srcstr="$1.*$2.*$3.*$4"
+    elif [ "$#" -eq 5 ]; then
+        srcstr="$1.*$2.*$3.*$4.*$5"
+    fi
+
+    echo ""
+
+    ext="\.c"
+    find . -type f -name "*$ext" -exec \
+    grep -i -n "$srcstr" '{}' \; -print  | \
+    sed "s/^/    /" | \
+    sed "s/^    \.\//-------------------------------------------/" | \
+    grep -i --color ".*$ext\|$srcstr"
+
+    echo ""
+}
