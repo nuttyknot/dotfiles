@@ -114,8 +114,8 @@ set number
 set notimeout ttimeout ttimeoutlen=200
 
 " Use <F11> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F11>
-
+"set pastetoggle=<F11>
+set paste
 
 "------------------------------------------------------------
 " Indentation options {{{1
@@ -151,4 +151,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
 set encoding=utf-8
+
+au BufRead,BufNewFile *.txt set filetype=markdown
 
