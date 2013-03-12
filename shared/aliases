@@ -1,7 +1,7 @@
 alias oin="open -a /Applications/$1 $2"
 alias lsa="ls -lah"
 alias vi="mvim -v"
-alias mkd="mkdir `date +'%Y%d%m'` && cd `date +'%Y%d%m'`"
+alias mkd="mkdir `date +'%Y%m%d'` && cd `date +'%Y%m%d'`"
 
 export VISUAL='mvim -v -f'
 
