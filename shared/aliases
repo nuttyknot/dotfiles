@@ -1,6 +1,17 @@
 alias lsa="ls -lah"
 export VISUAL='vi'
-fic () {
+alias mkd="mkdir `date +'%Y%m%d'` && cd `date +'%Y%m%d'`"
+
+function h() {
+    if [ -z "$1" ]
+    then
+        history
+    else
+        history | grep "$@"
+    fi
+}
+
+function fic () {
     if [ "$#" -eq 1 ]; then
         srcstr="$1"
     elif [ "$#" -eq 2 ]; then
